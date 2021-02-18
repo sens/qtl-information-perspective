@@ -1,7 +1,7 @@
 # Quantitative trait locus study design from an information perspective S Sen, JM Satagopan, and GA Churchill
 -----------------------------------------------------------------------------------------------------------
 
-[paper](https://www.genetics.org/content/170/1/447.long) ~ [symbolic](#symbolic) ~ [figures](#figures)
+[paper](https://www.genetics.org/content/170/1/447.long) ~ [symbolic computation code](#symbolic) ~ [figures](#figures)
 
 
 This page contains supplementary material for Sen S, Satagopan JM,
