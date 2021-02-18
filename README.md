@@ -1,33 +1,32 @@
 # Quantitative trait locus study design from an information perspective S Sen, JM Satagopan, and GA Churchill
 -----------------------------------------------------------------------------------------------------------
 
-[paper](%20http://repositories.cdlib.org/cbmb/QTLdesign) ~ [symbolic](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/index.html#symbolic) \|\| [figures](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/index.html#figures)
+[paper](https://www.genetics.org/content/170/1/447.long) ~ [symbolic](#symbolic) ~ [figures](#figures)
 
 
 This page contains supplementary material for Sen S, Satagopan JM,
-Churchill GA (2005) \"Quantitative trait locus study design from an
-information perspective,\" Genetics, 170:447-464. Please email Saunak
-Sen(`sen@biostat.ucsf.edu`) if you have any problems or questions about
-the contents of this webpage.
+Churchill GA (2005) "Quantitative trait locus study design from an
+information perspective," Genetics, 170:447-464. Please email Saunak
+Sen if you have any problems or questions about the contents of this
+webpage.
 
-**[Disclaimer]{#disclaimer}** The source code and software distributed
-in this web page has no implied warranty. Use at your own risk.
 
-**[Symbolic computation code]{#symbolic}** Some of the results in the
-paper were derived using symbolic calculations in
-[Maxima](http://maxima.sourceforge.net). Start Maxima in your system,
-and then you can cut and paste the contents of the files below into the
-command window. The files are commented, so you should be able to follow
-the steps.
+## Symbolic computation code <a name="symbolic"></a>]{#symbolic} 
+
+Some of the results in the paper were derived using symbolic
+calculations in [Maxima](http://maxima.sourceforge.net). Start Maxima
+in your system, and then you can cut and paste the contents of the
+files below into the command window. The files are commented, so you
+should be able to follow the steps.
 
 -   Formula for missing information in backcross:
-    [bc-missing.max](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/bc-missing.max)
+    [bc-missing.max](bc-missing.max)
 -   Calculating the determinant and inverse of the information matrix
     for F~2~\'s:
-    [f2det.max](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/f2det.max)
+    [f2det.max](f2det.max)
 -   Formula for missing information in backcross in the presence of a
     second QTL, assuming that first QTL has small effect:
-    [2qtl.max](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/2qtl.max)
+    [2qtl.max](2qtl.max)
 
 **[Figures]{#figures}**
 
