@@ -4,12 +4,16 @@
 [paper](https://www.genetics.org/content/170/1/447.long) ~ [symbolic computation code](#symbolic) ~ [figures](#figures)
 
 
-This page contains supplementary material for Sen S, Satagopan JM,
-Churchill GA (2005) "Quantitative trait locus study design from an
-information perspective," Genetics, 170:447-464. Please email Saunak
-Sen if you have any problems or questions about the contents of this
-webpage.
+## Paper
 
+This page contains supplementary material for [Sen S, Satagopan JM,
+Churchill GA (2005) "Quantitative trait locus study design from an
+information perspective," Genetics,
+170:447-464](https://www.genetics.org/content/170/1/447.long). Please
+email me if you have any problems or questions about the contents of
+this webpage.
+
+** The code is basically unchanged from 2005 and recently uploaded onto this site. **
 
 ## Symbolic computation code <a name="symbolic"></a>
 
@@ -68,5 +72,5 @@ and give the type in a command window:
        R CMD INSTALL qtlDesign_0.32.tar.gz
 
 For more recent versions of the package see the
-[software](http://www.epibiostat.ucsf.edu/biostat/sen/software.html)
-page.
+[R/qtlDesign](https://CRAN.R-project.org/package=qtlDesign) page on
+CRAN.
