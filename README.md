@@ -1,2 +1,74 @@
-# qtl-information-perspective
-Quantitative trait locus study design from an information perspective: Supplementary information
+# Quantitative trait locus study design from an information perspective S Sen, JM Satagopan, and GA Churchill
+-----------------------------------------------------------------------------------------------------------
+
+[paper](%20http://repositories.cdlib.org/cbmb/QTLdesign) ~ [symbolic](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/index.html#symbolic) \|\| [figures](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/index.html#figures)
+
+
+This page contains supplementary material for Sen S, Satagopan JM,
+Churchill GA (2005) \"Quantitative trait locus study design from an
+information perspective,\" Genetics, 170:447-464. Please email Saunak
+Sen(`sen@biostat.ucsf.edu`) if you have any problems or questions about
+the contents of this webpage.
+
+**[Disclaimer]{#disclaimer}** The source code and software distributed
+in this web page has no implied warranty. Use at your own risk.
+
+**[Symbolic computation code]{#symbolic}** Some of the results in the
+paper were derived using symbolic calculations in
+[Maxima](http://maxima.sourceforge.net). Start Maxima in your system,
+and then you can cut and paste the contents of the files below into the
+command window. The files are commented, so you should be able to follow
+the steps.
+
+-   Formula for missing information in backcross:
+    [bc-missing.max](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/bc-missing.max)
+-   Calculating the determinant and inverse of the information matrix
+    for F~2~\'s:
+    [f2det.max](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/f2det.max)
+-   Formula for missing information in backcross in the presence of a
+    second QTL, assuming that first QTL has small effect:
+    [2qtl.max](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/2qtl.max)
+
+**[Figures]{#figures}**
+
+-   Figure 1:
+    [genopat.m](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/genopat.m);
+    this uses [Pseudomarker version
+    0.9](http://www.jax.org/staff/churchill/labsite/software/pseudomarker/pseudomarker0_9/index.html)
+    written in Matlab, and the [salt-induced hypertension
+    data](http://www.jax.org/staff/churchill/labsite/datasets/qtl/qtlarchive/hypertension1/index.html)
+    from Sugiyama et.al. (2001)
+-   Figure 2:
+    [chr4.R](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/chr4.R);
+    this uses the [R/qtl](http://www.biostat.jhsph.edu/~kbroman/qtl/)
+    package
+-   Figure 3:
+    [numerical.R](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/numerical.R)
+-   Figures 4 and 5:
+    [optimal.R](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/optimal.R)
+-   Figure 6:
+    [opt-alpha.R](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/opt-alpha.R);
+    this uses the R/qtlDesign package version 0.32 ([see
+    below](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/index.html#qtldesign)).
+-   Figure 7:
+    [replication.R](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/replication.R)
+-   Figure 8:
+    [2qtl.R](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/2qtl.R)
+
+**[R/qtlDesign]{#qtldesign}** This package performs power calculations
+and minimum effect size determinations for backcross and F~2~ intercross
+populations. These calculations take into account selective genotyping
+of the extreme phenotypic individuals and marker spacing. It is an
+add-on package to the [R](http://www.r-project.org) programming
+language. To install version 0.32 of the package (in UNIX or OS X)
+download the file
+[qtlDesign\_0.32.tar.gz](http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign/qtlDesign_0.32.tar.gz),
+and give the type in a command window:
+
+       R CMD INSTALL qtlDesign_0.32.tar.gz
+
+For more recent versions of the package see the
+[software](http://www.epibiostat.ucsf.edu/biostat/sen/software.html)
+page.
+
+\...last updated 13 july 2005\...
