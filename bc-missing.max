@@ -1,0 +1,81 @@
+/* --- get the missing information function for backcross --- */
+
+/* define normal density function */
+
+normpdf(x,m,s) := exp( -(1/2)*( (x-m)/s )^2 ) / (s*sqrt(2*%PI));
+
+/* define binomial density function */
+
+binomialpdf(x,p) := if (x=0) then (1-p) else if (x=1) then p else 0;
+
+/* conditional distribution of phenotype given genotype */
+
+ypdf(y,b,g) := normpdf(y,b*(2*g-1),1);
+
+/* prior distribution of genotype */
+
+gpdf(g,q) := binomialpdf(g,q);
+
+/* joint distribution of phenotype and genotype */
+
+ygpdf(y,g,b,q) := ypdf(y,b,g) * gpdf(g,q);
+
+/* marginal distribution of phenotype */
+
+ymarpdf(y,b,q) := sum( ygpdf(y,g,b,q), g,0,1 );
+
+/* posterior distribution of genotype */
+
+gpostpdf(g,y,b,q) := ygpdf(y,g,b,q)/ymarpdf(y,b,q);
+
+/* q lies between 0 and 1 */
+
+assume(q>0);
+assume(q<1);
+
+/* information of the missing data likelihood */
+/* differentiate the missing data log likelihood twice and then sum over
+the posterior distribution of the missing data (qtl genotypes) */
+
+missinfo: ratsimp(sum(ratsimp(diff(diff(-log(gpostpdf(g,y,b,q)),b),b))
+    *gpostpdf(g,y,b,q),g,0,1));
+
+/* this result still looks clumsy, so we will simplify */
+
+/* we divide the result by the posterior variance of the qtl genotypes */
+
+    ratsimp( missinfo / ( gpostpdf(1,y,b,q)*gpostpdf(0,y,b,q) ) ) ;
+
+
+/* ---- missing information for regression scenario ---- */
+
+/* conditional distribution of phenotype given genotype */
+
+ypdf(y,b,x) := normpdf(y,b*x,1);
+
+xpdf(x) := normpdf(x,0,1);
+
+/* joint distribution of phenotype and genotype */
+
+yxpdf(y,x,b) := ypdf(y,b,x) * xpdf(x);
+
+/* marginal distribution of phenotype */
+
+ymarpdf(y,b) := integrate( yxpdf(y,x,b), x,-INF,INF );
+
+/* posterior distribution of genotype */
+
+xpostpdf(x,y,b) := yxpdf(y,x,b)/ymarpdf(y,b);
+
+/* assumptions */
+
+assume(b#0);
+assume(y#0);
+
+/* information of the missing data likelihood */
+
+ratsimp(integrate(ratsimp(diff(diff(-log(xpostpdf(x,y,b)),b),b))
+  *xpostpdf(x,y,b),x,-INF,INF));
+
+
+
