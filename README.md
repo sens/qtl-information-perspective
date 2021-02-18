@@ -13,7 +13,7 @@ information perspective," Genetics,
 email me if you have any problems or questions about the contents of
 this webpage.
 
-** The code is basically unchanged from 2005 and recently uploaded onto this site. **
+**The code is basically unchanged from 2005 and recently uploaded onto this site.**
 
 ## Symbolic computation code <a name="symbolic"></a>
 
@@ -37,9 +37,9 @@ should be able to follow the steps.
 -   Figure 1:
     [genopat.m](genopat.m);
     this uses [Pseudomarker version
-    0.9](http://www.jax.org/staff/churchill/labsite/software/pseudomarker/pseudomarker0_9/index.html)
+    0.9](http://www.github.com/sens/pseudomarker/)
     written in Matlab, and the [salt-induced hypertension
-    data](hypertension1/index.html)
+    data](https://phenome.jax.org/projects/Sugiyama2)
     from Sugiyama et.al. (2001)
 -   Figure 2:
     [chr4.R](chr4.R);
